@@ -14,8 +14,10 @@ public class EnchantedBionics implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LogManager.getLogger("modid");
 	public static final FunnyItem FUNNY_ITEM = new FunnyItem(new Item.Settings().group(ItemGroup.MISC));
+	public static final FunnierItem FUNNIER_ITEM = new FunnierItem(new Item.Settings().group(ItemGroup.MISC));
 	@Override
 	public void onInitialize() {
-		Registry.register(Registry.ITEM, new Identifier("modid", "funny_item"), FUNNY_ITEM);
+		Registry.register(Registry.ITEM, new Identifier("enchantedbionics", "funny_item"), FUNNY_ITEM);
+		Registry.register(Registry.ITEM, new Identifier("enchantedbionics", "funnier_item"), FUNNIER_ITEM);
 	}
 }
