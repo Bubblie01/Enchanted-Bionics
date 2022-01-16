@@ -1,4 +1,4 @@
-package io.github.bubblie.enchantedbionics;
+package io.github.bubblie.enchantedbionics.item;
 
 
 public interface PlayerLimbInterface {

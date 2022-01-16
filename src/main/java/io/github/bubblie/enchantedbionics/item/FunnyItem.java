@@ -1,4 +1,4 @@
-package io.github.bubblie.enchantedbionics;
+package io.github.bubblie.enchantedbionics.item;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
@@ -6,7 +6,6 @@ import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.PlayerEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelPartNames;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.StackReference;
 import net.minecraft.item.Item;
@@ -17,11 +16,10 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class FunnierItem extends Item {
-    private int counter = 0;
-    PlayerEntityModel playerEntityModel;
+public class FunnyItem extends Item {
+	PlayerEntityModel playerEntityModel;
 
-    public FunnierItem(Settings settings) {
+    public FunnyItem(Settings settings) {
         super(settings);
     }
 
@@ -30,13 +28,15 @@ public class FunnierItem extends Item {
 
         if (world.isClient) {
             MinecraftClient client = MinecraftClient.getInstance();
-            EntityRenderer renderer = client.getEntityRenderDispatcher().getRenderer((AbstractClientPlayerEntity) client.player);
-            PlayerEntityModel playerEntityModel = ((PlayerEntityRenderer) (renderer)).getModel();
+            EntityRenderer<? super AbstractClientPlayerEntity> renderer = client.getEntityRenderDispatcher().getRenderer(client.player);
+            PlayerEntityModel<AbstractClientPlayerEntity> playerEntityModel = ((PlayerEntityRenderer) (renderer)).getModel();
             this.playerEntityModel = playerEntityModel;
-            (((PlayerLimbInterface) playerEntityModel)).setSpecificVisible(true, EntityModelPartNames.LEFT_ARM);
+            (((PlayerLimbInterface) playerEntityModel)).setSpecificVisible(false, EntityModelPartNames.LEFT_ARM);
+
         }
 
         return super.use(world, user, hand);
+
     }
 
     @Override
@@ -47,7 +47,7 @@ public class FunnierItem extends Item {
     @Override
     public boolean onClicked(ItemStack stack, ItemStack otherStack, Slot slot, ClickType clickType, PlayerEntity player, StackReference cursorStackReference) {
         if (clickType == ClickType.LEFT) {
-            (((PlayerLimbInterface) playerEntityModel)).setSpecificVisible(false, EntityModelPartNames.LEFT_ARM);
+            (((PlayerLimbInterface) playerEntityModel)).setSpecificVisible(true, EntityModelPartNames.LEFT_ARM);
         }
         return super.onClicked(stack, otherStack, slot, clickType, player, cursorStackReference);
     }

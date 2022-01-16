@@ -1,7 +1,7 @@
 package io.github.bubblie.enchantedbionics.mixin;
 
 
-import io.github.bubblie.enchantedbionics.PlayerLimbInterface;
+import io.github.bubblie.enchantedbionics.item.PlayerLimbInterface;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.LivingEntityRenderer;

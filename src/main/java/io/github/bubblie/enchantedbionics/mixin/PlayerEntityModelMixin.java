@@ -1,6 +1,6 @@
 package io.github.bubblie.enchantedbionics.mixin;
 
-import io.github.bubblie.enchantedbionics.PlayerLimbInterface;
+import io.github.bubblie.enchantedbionics.item.PlayerLimbInterface;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import org.spongepowered.asm.mixin.Mixin;

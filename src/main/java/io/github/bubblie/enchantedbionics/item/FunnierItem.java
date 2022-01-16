@@ -1,4 +1,4 @@
-package io.github.bubblie.enchantedbionics;
+package io.github.bubblie.enchantedbionics.item;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
@@ -16,11 +16,10 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class FunnyItem extends Item {
-    private int counter = 0;
-    PlayerEntityModel playerEntityModel;
+public class FunnierItem extends Item {
+	PlayerEntityModel playerEntityModel;
 
-    public FunnyItem(Settings settings) {
+    public FunnierItem(Settings settings) {
         super(settings);
     }
 
@@ -29,15 +28,13 @@ public class FunnyItem extends Item {
 
         if (world.isClient) {
             MinecraftClient client = MinecraftClient.getInstance();
-            EntityRenderer renderer = client.getEntityRenderDispatcher().getRenderer((AbstractClientPlayerEntity) client.player);
-            PlayerEntityModel playerEntityModel = ((PlayerEntityRenderer) (renderer)).getModel();
+            EntityRenderer<? super AbstractClientPlayerEntity> renderer = client.getEntityRenderDispatcher().getRenderer(client.player);
+            PlayerEntityModel<AbstractClientPlayerEntity> playerEntityModel = ((PlayerEntityRenderer) (renderer)).getModel();
             this.playerEntityModel = playerEntityModel;
-            (((PlayerLimbInterface) playerEntityModel)).setSpecificVisible(false, EntityModelPartNames.LEFT_ARM);
-
+            (((PlayerLimbInterface) playerEntityModel)).setSpecificVisible(true, EntityModelPartNames.LEFT_ARM);
         }
 
         return super.use(world, user, hand);
-
     }
 
     @Override
@@ -48,7 +45,7 @@ public class FunnyItem extends Item {
     @Override
     public boolean onClicked(ItemStack stack, ItemStack otherStack, Slot slot, ClickType clickType, PlayerEntity player, StackReference cursorStackReference) {
         if (clickType == ClickType.LEFT) {
-            (((PlayerLimbInterface) playerEntityModel)).setSpecificVisible(true, EntityModelPartNames.LEFT_ARM);
+            (((PlayerLimbInterface) playerEntityModel)).setSpecificVisible(false, EntityModelPartNames.LEFT_ARM);
         }
         return super.onClicked(stack, otherStack, slot, clickType, player, cursorStackReference);
     }
