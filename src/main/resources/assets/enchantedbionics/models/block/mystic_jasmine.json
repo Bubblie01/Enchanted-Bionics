@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "enchantedbionics:block/mystic_jasmine"
+  }
+}
