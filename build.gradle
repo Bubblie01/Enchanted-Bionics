@@ -33,6 +33,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modRuntimeOnly 'maven.modrinth:lazydfu:0.1.2'
+	modRuntimeOnly 'maven.modrinth:lithium:mc1.18.1-0.7.7'
 }
 
 processResources {
