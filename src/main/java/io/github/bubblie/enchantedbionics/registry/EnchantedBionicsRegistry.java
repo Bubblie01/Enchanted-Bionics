@@ -12,10 +12,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-
-import static io.github.bubblie.enchantedbionics.EnchantedBionics.MOD_ID;
 
 
 public class EnchantedBionicsRegistry {
@@ -52,7 +49,6 @@ public class EnchantedBionicsRegistry {
 	 * @return The created and registered BlockItem
 	 */
 	private static BlockItem register(String id, BlockItem blockItem) {
-		Identifier identifier = new Identifier(MOD_ID, id);
 		return Registry.register(Registry.ITEM, EnchantedBionics.id(id), blockItem);
 	}
 
@@ -63,12 +59,11 @@ public class EnchantedBionicsRegistry {
 	 * @return The created and registered Item
 	 */
 	private static Item register(String id, Item item) {
-		Identifier identifier = new Identifier(MOD_ID, id);
 		return Registry.register(Registry.ITEM, EnchantedBionics.id(id), item);
 	}
 
 	/**
 	 * Initialize the class
 	 */
-	public static void init() {}
+	public static void init() { }
 }

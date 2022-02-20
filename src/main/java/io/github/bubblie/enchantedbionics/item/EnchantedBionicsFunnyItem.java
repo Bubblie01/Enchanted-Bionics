@@ -17,7 +17,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 public class EnchantedBionicsFunnyItem extends Item {
-	PlayerEntityModel playerEntityModel;
+	PlayerEntityModel<AbstractClientPlayerEntity> playerEntityModel;
 
     public EnchantedBionicsFunnyItem(Settings settings) {
         super(settings);
