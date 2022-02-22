@@ -10,7 +10,15 @@ import net.minecraft.world.gen.GenerationStep;
 public class EnchantedBionicsBiomesRegistry {
 
 	public static void init() {
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST, BiomeKeys.DARK_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, BuiltinRegistries.PLACED_FEATURE.getKey(EnchantedBionicsVegetationPlacedFeatures.PATCH_MYSTIC_JASMINE).orElseThrow());
+		BiomeModifications.addFeature(
+				BiomeSelectors.includeByKey(
+						BiomeKeys.FLOWER_FOREST,
+						BiomeKeys.DARK_FOREST
+				),
+				GenerationStep.Feature.VEGETAL_DECORATION,
+				BuiltinRegistries.PLACED_FEATURE.getKey(
+						EnchantedBionicsVegetationPlacedFeatures.PATCH_MYSTIC_JASMINE.value()
+				).orElseThrow());
 	}
 
 }
