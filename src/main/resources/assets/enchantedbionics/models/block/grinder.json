@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "enchantedbionics:block/grinder_top",
+    "front": "enchantedbionics:block/grinder_front",
+    "side": "enchantedbionics:block/grinder_side"
+  }
+}

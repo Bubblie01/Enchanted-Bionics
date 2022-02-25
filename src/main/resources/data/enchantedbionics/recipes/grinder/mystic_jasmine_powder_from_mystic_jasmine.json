@@ -1,0 +1,10 @@
+{
+  "type": "enchantedbionics:grinding",
+  "ingredient": {
+    "item": "enchantedbionics:mystic_jasmine"
+  },
+  "result": "enchantedbionics:mystic_jasmine_powder",
+  "count": 2,
+  "experience": 2,
+  "cookingtime": 300
+}

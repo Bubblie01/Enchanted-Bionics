@@ -1,0 +1,11 @@
+{
+  "block.enchantedbionics.grinder": "Grinder",
+
+  "item.enchantedbionics.grinder": "Grinder",
+  "item.enchantedbionics.funnyitem": "Funny Item",
+  "item.enchantedbionics.funnieritem": "Funnier Item",
+
+  "container.grinder": "Grinder",
+
+  "gui.recipebook.toggleRecipes.grind": "Showing Grindable"
+}

@@ -14,8 +14,15 @@ group = project.maven_group
 
 repositories {
 	maven {
+		name = 'Modrinth'
 		url = 'https://api.modrinth.com/maven'
-		content { includeGroup 'maven.modrinth' }
+		content {
+			includeGroup 'maven.modrinth'
+		}
+	}
+	maven {
+		name = 'JitPack'
+		url = 'https://jitpack.io'
 	}
 }
 
@@ -31,6 +38,12 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+	modImplementation include("maven.modrinth:booking_it:${project.bi_version}")
+
+	modImplementation include("com.github.Chocohead:Fabric-ASM:v${project.mm_version}") {
+		exclude (group: "net.fabricmc.fabric-api")
+	}
+
 	modRuntimeOnly 'maven.modrinth:lazydfu:0.1.2'
 }
 
@@ -44,6 +57,7 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.release.set(targetJavaVersion)
+	it.options.incremental(true)
 	it.options.deprecation(true)
     it.options.encoding('UTF-8')
 }
@@ -77,4 +91,8 @@ quiltflower {
 
 runClient {
 	jvmArgs('-Dmixin.debug.export=true', '-Xmx1536m')
+}
+
+loom {
+	accessWidenerPath = file('src/main/resources/enchantedbionics.accesswidener')
 }

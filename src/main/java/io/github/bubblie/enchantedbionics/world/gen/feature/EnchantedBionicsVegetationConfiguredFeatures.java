@@ -16,7 +16,7 @@ public class EnchantedBionicsVegetationConfiguredFeatures {
 			EnchantedBionics.id("patch_mystic_jasmine").toString(),
 			Feature.RANDOM_PATCH,
 			ConfiguredFeatureUtil.createRandomPatchFeatureConfig(
-					Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(EnchantedBionicsRegistry.MYSTIC_JASMINE))
+					Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(EnchantedBionicsRegistry.MYSTIC_JASMINE_FLOWER))
 			)
 	);
 }

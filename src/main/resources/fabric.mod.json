@@ -21,6 +21,12 @@
   "entrypoints": {
     "main": [
       "io.github.bubblie.enchantedbionics.EnchantedBionics"
+    ],
+    "client": [
+      "io.github.bubblie.enchantedbionics.client.EnchantedBionicsClient"
+    ],
+    "booking_it:recipe_book": [
+      "io.github.bubblie.enchantedbionics.EnchantedBionicsRecipeBookAdder"
     ]
   },
   "mixins": [
@@ -29,8 +35,9 @@
 
   "depends": {
     "fabricloader": ">=0.12.9",
-    "fabric": "*",
+    "fabric": ">=0.46",
     "minecraft": ">=1.18.2-beta.2",
-    "java": ">=17"
+    "java": ">=17",
+    "booking_it": "*"
   }
 }

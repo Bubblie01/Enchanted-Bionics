@@ -16,10 +16,10 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class EnchantedBionicsFunnyItem extends Item {
+public class FunnyItem extends Item {
 	PlayerEntityModel<AbstractClientPlayerEntity> playerEntityModel;
 
-    public EnchantedBionicsFunnyItem(Settings settings) {
+    public FunnyItem(Settings settings) {
         super(settings);
     }
 
