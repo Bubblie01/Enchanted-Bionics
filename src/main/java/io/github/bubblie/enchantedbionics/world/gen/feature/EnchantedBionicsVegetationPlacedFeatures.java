@@ -9,7 +9,7 @@ import net.minecraft.world.gen.feature.util.PlacedFeatureUtil;
 
 public class EnchantedBionicsVegetationPlacedFeatures {
 
-	public static final Holder<PlacedFeature> PATCH_MYSTIC_JASMINE = PlacedFeatureUtil.m_yiesbcvk("patch_mystic_jasmine",
+	public static final Holder<PlacedFeature> PATCH_MYSTIC_JASMINE = PlacedFeatureUtil.register("patch_mystic_jasmine",
 			EnchantedBionicsVegetationConfiguredFeatures.PATCH_MYSTIC_JASMINE,
 			RarityFilterPlacementModifier.create(36),
 			InSquarePlacementModifier.getInstance(),
