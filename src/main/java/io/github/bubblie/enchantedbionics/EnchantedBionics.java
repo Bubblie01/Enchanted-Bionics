@@ -1,7 +1,7 @@
 package io.github.bubblie.enchantedbionics;
 
 import com.github.aws404.booking_it.BookingIt;
-import io.github.bubblie.enchantedbionics.Recipe.GrindingRecipe;
+import io.github.bubblie.enchantedbionics.recipe.GrindingRecipe;
 import io.github.bubblie.enchantedbionics.registry.EnchantedBionicsBiomesRegistry;
 import io.github.bubblie.enchantedbionics.registry.EnchantedBionicsRegistry;
 import net.fabricmc.api.ModInitializer;

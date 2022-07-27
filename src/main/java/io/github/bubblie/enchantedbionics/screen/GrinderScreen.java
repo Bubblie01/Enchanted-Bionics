@@ -8,7 +8,6 @@ import net.minecraft.client.gui.screen.recipebook.AbstractFurnaceRecipeBookScree
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.Item;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 
 import java.util.Set;
@@ -23,7 +22,7 @@ public class GrinderScreen extends AbstractFurnaceScreen<GrinderScreenHandler> {
 
 	@Environment(EnvType.CLIENT)
 	protected static class RecipeBookScreen extends AbstractFurnaceRecipeBookScreen {
-		private static final Text TOGGLE_GRINDABLE_RECIPES_TEXT = new TranslatableText("gui.recipebook.toggleRecipes.grind");
+		private static final Text TOGGLE_GRINDABLE_RECIPES_TEXT = Text.translatable("gui.recipebook.toggleRecipes.grind");
 
 		@Override
 		protected Text getToggleCraftableButtonText() {

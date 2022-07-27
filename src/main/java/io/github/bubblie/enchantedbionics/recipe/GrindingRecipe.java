@@ -1,4 +1,4 @@
-package io.github.bubblie.enchantedbionics.Recipe;
+package io.github.bubblie.enchantedbionics.recipe;
 
 import io.github.bubblie.enchantedbionics.EnchantedBionics;
 import io.github.bubblie.enchantedbionics.registry.EnchantedBionicsRegistry;

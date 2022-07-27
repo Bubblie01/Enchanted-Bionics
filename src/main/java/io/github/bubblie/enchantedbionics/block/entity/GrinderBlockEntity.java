@@ -8,7 +8,6 @@ import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
 
 public class GrinderBlockEntity extends AbstractFurnaceBlockEntity {
@@ -18,7 +17,7 @@ public class GrinderBlockEntity extends AbstractFurnaceBlockEntity {
 
 	@Override
 	protected Text getContainerName() {
-		return new TranslatableText("container.grinder");
+		return Text.translatable("container.grinder");
 	}
 
 	@Override
